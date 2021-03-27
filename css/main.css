@@ -18,6 +18,8 @@ html {
 }
 /* fact of the day container */
 body {
+  background: black;
+  color: white;
   width: 100%;
 }
 .fact-container {
@@ -38,6 +40,9 @@ body {
 .fact-container h1, h2 {
   margin: 0px !important;
   text-transform: lowercase;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  text-shadow: 2.5px -1.5px 0px white; 
 }
 .fact-container h1#time {
   font-size: 3.5rem;
@@ -80,10 +85,13 @@ body {
 }
 /* tagline */ 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 10px 0px;
   text-align: center;
   text-transform: lowercase;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  text-shadow: 2.5px -1.5px 0px white; 
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -266,7 +274,7 @@ textarea {
   *::after {
     background: #fff !important;
     color: #000 !important;
-    /* Black prints faster */
+    /* rgba prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }

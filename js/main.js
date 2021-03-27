@@ -6,7 +6,7 @@ const fullDateContainer = document.getElementById("date");
 // get time & date and display them in the top bar of the ePod
 function updateTime() {
   // declare variables for am/pm & the symbols that go with them
-  var timeIndicator, timeIndicatorSymbol;
+  var timeIndicator;
   // declare date & the time/date methods to go along with them
   var today = new Date();
   var todayDayName = today.getDay();
@@ -87,12 +87,6 @@ function updateTime() {
     timeIndicator = "AM";
   } else {
     timeIndicator = "PM";
-  }
-  // day or night time indicator symbol
-  if (todayHour >= 18) {
-    timeIndicatorSymbol = "&#9789;";
-  } else {
-    timeIndicatorSymbol = "&#9728;";
   }
   // convert hours from military time into US standard time
   switch (todayHour) {
@@ -179,7 +173,7 @@ function updateTime() {
   }
   // plug the time into the inner HTML of the container
   timeContainer.innerHTML =
-    todayHour + ":" + todayMins + timeIndicator + " " + timeIndicatorSymbol;
+    todayHour + ":" + todayMins + timeIndicator;
   // plug the date into the inner HTML of the container
   dayContainer.innerHTML = todayDayName;
   fullDateContainer.innerHTML = todayMonth + " " + todayDay + ", " + todayYear;
